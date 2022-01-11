@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: foo
-        uses: cattz/gha-composable-actions@v1
+        uses: ./github/actions/greet
         with:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
